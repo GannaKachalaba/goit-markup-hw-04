@@ -294,6 +294,7 @@ body {
 
 .section-img {
   padding-top: 94px;
+  padding-bottom: 94px;
   background-color: var(--primary-bg-color);
 }
 
@@ -480,22 +481,34 @@ padding-bottom: 94px;
 }
 
 
-
-
 .client-list {
   display: flex;
   justify-content: center;
   /* gap: 30px; */
-  
 }
+
+.client-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 170px;
+  min-height: 92px;
+  border: 1px solid var(--social-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+ 
+
+
  .icon-client {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 106px;
+  min-width: 106px;
   height: 60px;
   cursor: pointer;
   fill: var(--social-color);
+  
 
 }
 
@@ -505,32 +518,20 @@ padding-bottom: 94px;
   justify-content: center;
   align-items: center;
   margin-left: 30px;
-  width: 170px;
-  height: 92px;
-  border: 1px solid var(--social-color);
-  border-radius: 4px;
+  min-width: 170px;
+  min-height: 92px;
   cursor: pointer;
   /* background: #F5F5F5; */
 }
 
-
-
-.icon-client:hover,
-.icon-client:focus {
+.client-link:hover .icon-client,
+.client-link:focus .icon-client {
   fill: var(--accent-color);
-}
+  }
 
-.client-item:hover .icon-client,
-.client-item:focus .icon-client
-{
-  fill: var(--accent-color);
- 
-}
-
-.client-item:hover,
-.client-item:focus {
-  border: 1px solid var(--accent-color);
-  border-radius: 4px;
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--accent-color);
 }
 
 
@@ -563,10 +564,13 @@ padding-bottom: 94px;
 
 /* footer */
 .footer-social {
-    display: inline-flex;
     margin-right: 70px;
     align-items: baseline;
     flex-direction: column;
+}
+.conteiner.social {
+  display: flex;
+  align-items: baseline;
 }
 
 
@@ -611,7 +615,6 @@ padding-bottom: 94px;
 }
 
 .footer-social-title {
-margin-bottom: 20px;
 font-family: 'Roboto';
 font-style: normal;
 font-weight: 700;
@@ -722,13 +725,13 @@ color: var(--primary-bg-color);
 }
 
 .portfolio-link {
+  display: block;
   text-decoration: none;
   list-style: none;
-  }
+   }
 
 
-.items-hero:hover,
-.items-hero:focus,
+
 .portfolio-link:hover,
 .portfolio-link:focus {
   box-shadow: 
